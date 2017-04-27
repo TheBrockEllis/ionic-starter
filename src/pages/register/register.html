@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <p>Registering for an account will allow you to use any one of our applications using the same email/password combination.</p>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]='email' type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]='password' type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password Again</ion-label>
+      <ion-input [(ngModel)]='confirmation' type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button type='submit' full color="primary" (click)='submitRegistration()'>Register</button>
+
+</ion-content>

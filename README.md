@@ -27,3 +27,15 @@ This provider is responsible for handling all of the data about the user. When t
   Pre-installed with Ionic
 - SplashScreen
   Pre-installed with Ionic
+
+## Pages
+- Login
+- Register
+- PasswordReset
+- Home
+
+- Need to add a logo to `assets/img/logo.png` to show up on the login page
+
+## hooks
+
+- Added a `before_prepare` in the `hooks/` directory. It should fire on every build and increment a build number inside of the `config.xml` file. It's only dependency is xml2js installed via `npm install xml2js --save`

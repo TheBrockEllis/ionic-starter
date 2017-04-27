@@ -44,28 +44,26 @@ export class Auth {
   login(username, password){
     let url;
     if(document.URL.includes('https://') || document.URL.includes('http://')){
-      url = "http://127.0.0.1:3001/token.json";
+      url = "http://mbb.lvh.me:3001/token.json";
     } else {
-      url = "https://handbooks.cprmedicine.com/token.json";
+      url = "ADDURLHERESOMEDAY";
     }
 
     var headers = new Headers();
     headers.append('Authorization', 'Basic ' + btoa(username + ":" + password));
     headers.append("Content-Type", 'application/json');
 
-    //console.log("Using un and pw combo:", username, password);
+    console.log("Using un and pw combo:", username, password);
 
-    //may need to transform username and password to something else here
-    //like www-x-url-encoded or something
     return new Promise( (resolve, reject) => {
       this.http.get(url, { headers: headers })
         .map(res => res.json())
         .subscribe(data => {
-          //console.log("got to the subscribe part: ", data);
+          console.log("got to the subscribe part: ", data);
           this.data = data;
           resolve(this.data);
         }, error => {
-          //console.log("got to the rejected part =(");
+          console.log("got to the rejected part =(");
           reject(error);
         });
     });
@@ -82,7 +80,7 @@ export class Auth {
   }
 
   register(data){
-    let url = "https://handbooks.cprmedicine.com/register.json";
+    let url = "UR-TO-REGISTRATION";
 
     var headers = new Headers();
     headers.append("Content-Type", 'application/json');
@@ -99,7 +97,7 @@ export class Auth {
   }
 
   resetPassword(data){
-    let url = "https://handbooks.cprmedicine.com/reset_password.json";
+    let url = "URL-TO-PASSWORD-RESET";
 
     var headers = new Headers();
     headers.append("Content-Type", 'application/json');

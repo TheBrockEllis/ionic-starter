@@ -1,0 +1,30 @@
+<ion-header color="primary">
+  <ion-navbar color="primary">
+    <ion-title>App Name</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src="assets/img/logo.png">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating="">Username</ion-label>
+      <ion-input type="text" [(ngModel)]='username'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button full (click)='attemptLogin()'>Login</button>
+
+  <button ion-button full clear (click)='resetPassword()'>Forgot Password?</button>
+  <button ion-button full clear (click)='registerAccount()'>Sign up for an account</button>
+
+</ion-content>
