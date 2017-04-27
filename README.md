@@ -39,3 +39,7 @@ This provider is responsible for handling all of the data about the user. When t
 ## hooks
 
 - Added a `before_prepare` in the `hooks/` directory. It should fire on every build and increment a build number inside of the `config.xml` file. It's only dependency is xml2js installed via `npm install xml2js --save`
+
+## ionicnativemodule
+- `npm uninstall --save @ionic-native/core`
+- `npm install --save @ionic-native/core@latest`
