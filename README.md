@@ -2,6 +2,11 @@
 
 This is a template for Ionic 3 apps. It includes a few providers that I like to use and want to include in all new Ionic apps.
 
+## Getting Started
+- git clone
+- `npm install` to install ndependencies
+- `ionic state reset` to install cordova plugins
+
 ## Providers
 
 ### Auth
