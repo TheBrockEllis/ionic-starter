@@ -19,12 +19,13 @@ export class Auth {
       });
     });
 
+    // we want to clear out data when the user wants to log out, so listen
+    // for the event to take place
     this.events.subscribe('user:loggedout', () => {
       this.logout();
     });
 
     this.loginStatus();
-
   }
 
   loginStatus(){
@@ -80,7 +81,7 @@ export class Auth {
   }
 
   register(data){
-    let url = "UR-TO-REGISTRATION";
+    let url = "URL-TO-REGISTRATION";
 
     var headers = new Headers();
     headers.append("Content-Type", 'application/json');

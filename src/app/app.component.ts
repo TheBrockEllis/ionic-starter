@@ -25,6 +25,11 @@ export class MyApp {
       this.rootPage = HomePage;
     });
 
+    // When user gets logged out, we need to display the login page again
+    this.events.subscribe("user:loggedout", () => {
+      this.rootPage = LoginPage;
+    });
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

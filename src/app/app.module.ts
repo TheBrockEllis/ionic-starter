@@ -10,6 +10,7 @@ import { RegisterPage } from '../pages/register/register';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+import { SettingsPage } from '../pages/settings/settings';
 
 /* Custom Providers */
 import { Auth } from '../providers/auth';
@@ -27,7 +28,8 @@ import { Network } from '@ionic-native/network';
     HomePage,
     RegisterPage,
     ResetPasswordPage,
-    LoginPage
+    LoginPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { Network } from '@ionic-native/network';
     HomePage,
     RegisterPage,
     ResetPasswordPage,
-    LoginPage
+    LoginPage,
+    SettingsPage
   ],
   providers: [
     StatusBar, SplashScreen, Network, Auth, User, HTTP,
